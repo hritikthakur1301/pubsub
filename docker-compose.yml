@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  receiver:
+    build:
+      context: ./reciever
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  listener:
+    build:
+      context: ./listener
+      dockerfile: Dockerfile
+    ports:
+      - "1001:1001"
